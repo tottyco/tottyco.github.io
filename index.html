@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>龙珠漫画-龙珠漫画全集阅读指南与经典篇章</title>
+    <meta name="description" content="龙珠漫画官方正版阅读顺序、经典篇章回顾、角色战力解析与FAQ，带你重温鸟山明传奇之作。从天下第一武道会到魔人布欧篇，一站式龙珠漫画指南。">
+    <meta name="keywords" content="龙珠漫画,七龙珠,龙珠Z,孙悟空,鸟山明,龙珠漫画阅读,龙珠漫画顺序,龙珠漫画经典篇章">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        /* ===== 全局重置与配色 ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f7f4ef;
+            color: #1e1a24;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== 色彩系统 ===== */
+        :root {
+            --primary: #e85d04;
+            --primary-dark: #c94f02;
+            --secondary: #ffba08;
+            --accent: #0b090a;
+            --bg: #f7f4ef;
+            --card-bg: #ffffff;
+            --text-dark: #16121c;
+            --text-soft: #44404b;
+            --border-light: #e0d8ce;
+            --shadow-sm: 0 10px 20px rgba(0,0,0,0.04);
+            --shadow-hover: 0 18px 30px rgba(0,0,0,0.10);
+        }
+
+        /* ===== 页眉 ===== */
+        .site-header {
+            background: linear-gradient(145deg, #16121c, #2a1e2e);
+            color: #f2ede7;
+            padding: 1.2rem 0;
+            border-bottom: 4px solid var(--secondary);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .brand h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: #fff;
+            text-shadow: 0 2px 8px rgba(232, 93, 4, 0.4);
+        }
+        .brand span {
+            color: var(--secondary);
+        }
+        .site-nav ul {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .site-nav a {
+            font-weight: 600;
+            color: #e8e2da;
+            padding: 0.3rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .site-nav a:hover {
+            color: var(--secondary);
+            border-bottom-color: var(--secondary);
+        }
+
+        /* ===== 首屏 ===== */
+        .hero-section {
+            background: radial-gradient(circle at 10% 30%, #fccf7c, #ffb347);
+            padding: 3rem 0;
+            border-bottom: 1px solid #dbb776;
+        }
+        .hero-grid {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .hero-text {
+            flex: 1 1 350px;
+        }
+        .hero-text h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #1d140c;
+            margin-bottom: 0.2rem;
+            line-height: 1.2;
+        }
+        .hero-text .subhead {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #402f1c;
+            margin-bottom: 1.2rem;
+        }
+        .hero-text p {
+            font-size: 1.1rem;
+            max-width: 550px;
+            color: #2b1d0f;
+        }
+        .hero-cta {
+            margin-top: 1.8rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            background: #1e1a24;
+            color: #fff;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            font-weight: 600;
+            border: 2px solid #1e1a24;
+            transition: 0.25s;
+            cursor: default;
+        }
+        .btn-secondary {
+            background: transparent;
+            border-color: #1e1a24;
+            color: #1e1a24;
+        }
+        .btn:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+        .hero-badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== 卡片区域 ===== */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.2rem;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 10px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0 3rem;
+        }
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #eee5da;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--secondary);
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.6rem;
+            color: #1c161d;
+        }
+        .card p {
+            color: var(--text-soft);
+            margin-bottom: 1rem;
+            font-size: 0.98rem;
+        }
+        .card a {
+            margin-top: auto;
+            font-weight: 600;
+            color: var(--primary-dark);
+            border-bottom: 2px dotted var(--primary);
+            align-self: flex-start;
+        }
+        .card a:hover {
+            color: var(--accent);
+            border-bottom-style: solid;
+        }
+
+        /* ===== 篇章时间线 ===== */
+        .arc-list {
+            background: white;
+            border-radius: 30px;
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            margin: 2rem 0;
+        }
+        .arc-item {
+            display: flex;
+            gap: 1.5rem;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid var(--border-light);
+            align-items: flex-start;
+        }
+        .arc-item:last-child {
+            border-bottom: none;
+        }
+        .arc-year {
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--primary);
+            min-width: 80px;
+        }
+        .arc-detail h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.2rem;
+        }
+        .arc-detail p {
+            color: #4a4240;
+            font-size: 0.98rem;
+        }
+
+        /* ===== 步骤/阅读顺序区 ===== */
+        .steps-panel {
+            background: #1e1a24;
+            color: #f2ede7;
+            border-radius: 36px;
+            padding: 2.5rem;
+            margin: 3rem 0;
+        }
+        .steps-panel h2 {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .step-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.8rem;
+            justify-content: space-between;
+        }
+        .step-item {
+            flex: 1 1 180px;
+            background: #362f3e;
+            padding: 1.5rem 1rem;
+            border-radius: 28px;
+            text-align: center;
+        }
+        .step-number {
+            background: var(--primary);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            margin: 0 auto 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 28px;
+            padding: 1.8rem;
+            border-left: 8px solid var(--secondary);
+            box-shadow: var(--shadow-sm);
+        }
+        .faq-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.7rem;
+        }
+
+        /* ===== 页脚 ===== */
+        .site-footer {
+            background: #1b1520;
+            color: #b9b0a8;
+            padding: 2.5rem 0;
+            margin-top: 3rem;
+            border-top: 6px solid var(--primary);
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: #d6cdc4;
+            font-weight: 500;
+        }
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+        .copyright {
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 0.4px;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .hero-text h2 {
+                font-size: 2.2rem;
+            }
+            .hero-grid {
+                flex-direction: column;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .arc-item {
+                flex-direction: column;
+                gap: 0.2rem;
+            }
+            .arc-year {
+                min-width: auto;
+            }
+            .steps-panel {
+                padding: 1.8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            .btn {
+                padding: 0.5rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="brand">
+                <h1>龙珠漫画<span>·</span></h1>
+                <span style="font-size: 1.2rem; font-weight: 300;">热血与冒险的经典</span>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="#overview">漫画简介</a></li>
+                    <li><a href="#arcs">经典篇章</a></li>
+                    <li><a href="#order">阅读顺序</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏区域 -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="hero-badge">鸟山明 · 不朽杰作</span>
+                    <h2>龙珠漫画</h2>
+                    <div class="subhead">从少年冒险到宇宙级战斗</div>
+                    <p>完整收录原作漫画（龙珠/龙珠Z）的阅读指南，涵盖赛亚人篇、弗利萨篇、沙鲁游戏、魔人布欧篇。无论你是新读者还是老粉，都能找到最清晰的脉络。</p>
+                    <div class="hero-cta">
+                        <span class="btn">开始重温</span>
+                        <span class="btn btn-secondary">角色图鉴</span>
+                    </div>
+                </div>
+                <div style="flex: 1 1 200px; text-align: center; font-size: 5rem; filter: drop-shadow(0 10px 14px rgba(0,0,0,0.2));">
+                    🐉✨
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心概况卡片 -->
+        <div class="container">
+            <h2 class="section-title" id="overview">龙珠漫画核心看点</h2>
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-icon">🥋</div>
+                    <h3>热血战斗</h3>
+                    <p>天下第一武道会、那美克星激战，悟空与伙伴的极限突破，每一场战斗都改变战力格局。</p>
+                    <a href="#arcs">查看战斗篇章 →</a>
+                </article>
+                <article class="card">
+                    <div class="card-icon">🌌</div>
+                    <h3>世界观拓展</h3>
+                    <p>从地球到宇宙，那美克星、界王星、魔界……多元宇宙的设定开创了少年漫新高度。</p>
+                    <a href="#order">了解阅读顺序 →</a>
+                </article>
+                <article class="card">
+                    <div class="card-icon">😄</div>
+                    <h3>幽默与冒险</h3>
+                    <p>早期龙珠的搞笑冒险与后期暗黑强敌形成反差，鸟山明式幽默贯穿始终。</p>
+                    <a href="#faq">常见疑问 →</a>
+                </article>
+            </div>
+        </div>
+
+        <!-- 漫画篇章时间线 -->
+        <div class="container">
+            <h2 class="section-title" id="arcs">经典篇章导览</h2>
+            <div class="arc-list">
+                <div class="arc-item">
+                    <div class="arc-year">第1-8卷</div>
+                    <div class="arc-detail">
+                        <h3>少年篇 · 冒险与武道会</h3>
+                        <p>悟空与布尔玛相遇，寻找龙珠，参加武道会，结识克林、龟仙人。轻松幽默的起点。</p>
+                    </div>
+                </div>
+                <div class="arc-item">
+                    <div class="arc-year">第9-17卷</div>
+                    <div class="arc-detail">
+                        <h3>比克大魔王篇</h3>
+                        <p>短笛大魔王的威胁，悟空首次面对真正的“魔王”，龙珠的代价与牺牲。</p>
+                    </div>
+                </div>
+                <div class="arc-item">
+                    <div class="arc-year">第17-28卷</div>
+                    <div class="arc-detail">
+                        <h3>赛亚人 & 那美克星篇</h3>
+                        <p>拉蒂兹揭示悟空身世，贝吉塔来袭。那美克星上弗利萨的恐怖统治，超级赛亚人觉醒！</p>
+                    </div>
+                </div>
+                <div class="arc-item">
+                    <div class="arc-year">第29-42卷</div>
+                    <div class="arc-detail">
+                        <h3>沙鲁游戏 & 魔人布欧篇</h3>
+                        <p>人造人、沙鲁游戏，悟饭超越极限；布欧篇的融合与全宇宙的存亡。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阅读顺序建议 -->
+        <div class="container">
+            <div class="steps-panel" id="order">
+                <h2>📘 龙珠漫画阅读顺序（正版推荐）</h2>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <h3>龙珠 1-42卷</h3>
+                        <p>完全版/单行本，包含全部原作剧情，从悟空童年到布欧篇结束。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <h3>龙珠Z 动画对应</h3>
+                        <p>漫画第17卷起对应动画《龙珠Z》，但漫画原作更紧凑，推荐直接读漫画。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <h3>龙珠超 漫画</h3>
+                        <p>正史续篇（魔人布欧篇之后），讲述破坏神比鲁斯与全王篇章，丰太郎作画。</p>
+                    </div>
+                </div>
+                <p style="margin-top: 2rem; background: rgba(255,255,255,0.08); padding: 1rem; border-radius: 60px; text-align: center; font-weight: 500;">
+                    💡 提示：若想体验最原汁原味的龙珠漫画，从第1卷开始按顺序阅读是最佳方式。
+                </p>
+            </div>
+        </div>
+
+        <!-- 详细说明与优势 -->
+        <div class="container">
+            <h2 class="section-title">为什么龙珠漫画能成为传奇</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div style="background: #fff; border-radius: 28px; padding: 1.8rem;">
+                    <h3 style="font-size: 1.5rem;">🎨 分镜教科书</h3>
+                    <p>鸟山明的动作分镜清晰流畅，速度感与力量感至今仍是漫画家的标杆。</p>
+                </div>
+                <div style="background: #fff; border-radius: 28px; padding: 1.8rem;">
+                    <h3 style="font-size: 1.5rem;">📈 成长体系</h3>
+                    <p>战斗力数值、超级赛亚人变身、融合与潜力开发，每一次升级都令人兴奋。</p>
+                </div>
+                <div style="background: #fff; border-radius: 28px; padding: 1.8rem;">
+                    <h3 style="font-size: 1.5rem;">🌍 角色魅力</h3>
+                    <p>从悟空的天真到贝吉塔的骄傲，比克、克林、布尔玛等角色深入人心。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 区块 -->
+        <div class="container">
+            <h2 class="section-title" id="faq">常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>❓ 龙珠漫画和龙珠Z漫画有什么区别？</h3>
+                    <p>连载时因动画分割，漫画原作从第17卷开始被称为“龙珠Z”阶段，但单行本统一为《龙珠》全42卷。内容无差别，只是章节划分不同。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ 直接看漫画还是动画比较好？</h3>
+                    <p>漫画节奏更快，无动画原创填充，且分镜极具冲击力。动画则有声优和配乐加成。建议先读漫画，再选择喜欢的篇章补动画。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ 龙珠漫画有多少本？</h3>
+                    <p>原版单行本全42卷，完全版共34卷。另外有《龙珠超》漫画作为续集，仍在连载中。</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ 龙珠漫画适合小孩看吗？</h3>
+                    <p>早期冒险篇全年龄向，后期有战斗暴力场面，但整体价值观积极。适合小学生及以上读者，家长可酌情引导。</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">龙珠漫画</a>
+                <a href="#">赛亚人篇</a>
+                <a href="#">那美克星</a>
+                <a href="#">原作资料</a>
+                <a href="#">正版阅读</a>
+            </div>
+            <p class="copyright">© 龙珠爱好者资料站 · 本页面向原作致敬 · 请支持正版龙珠漫画</p>
+        </div>
+    </footer>
+</body>
+</html>
