@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑执事漫画-黑执事漫画全集与阅读指南</title>
+    <meta name="description" content="黑执事漫画深度介绍与阅读指南。了解黑执事漫画的剧情设定、主要角色、系列篇章、阅读顺序以及常见问题，帮助读者快速入门并深入理解这部经典作品。">
+    <meta name="keywords" content="黑执事漫画,黑执事,枢梁,漫画阅读,黑执事漫画指南,夏尔,塞巴斯蒂安">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+            background-color: #f7f4ef;
+            color: #2c2a26;
+            line-height: 1.7;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* 页眉与导航 */
+        header {
+            background: #1a1815;
+            border-bottom: 4px solid #a8814f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+        .header-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 12px 0;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #f0e4d3;
+            letter-spacing: 1px;
+        }
+        .brand-mark {
+            width: 38px;
+            height: 38px;
+            background: linear-gradient(145deg, #a8814f, #6e4e2a);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+        nav ul {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #d9cfc0;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 6px 2px;
+            border-bottom: 2px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        nav a:hover {
+            color: #ffffff;
+            border-bottom-color: #a8814f;
+        }
+        /* 首屏 */
+        .hero {
+            background: linear-gradient(135deg, #221e19 0%, #3b342c 100%);
+            padding: 70px 0 60px;
+            color: #f0e7d8;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(168,129,79,0.3) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-content {
+            max-width: 760px;
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 18px;
+            line-height: 1.2;
+            letter-spacing: 0.5px;
+        }
+        .hero p {
+            font-size: 1.15rem;
+            margin-bottom: 24px;
+            color: #c8b9a5;
+        }
+        .hero-meta {
+            display: inline-block;
+            background: rgba(168,129,79,0.2);
+            border-left: 4px solid #a8814f;
+            padding: 10px 18px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            color: #e6d8c3;
+        }
+        /* 内容分区通用 */
+        section {
+            padding: 60px 0;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #1f1b17;
+            position: relative;
+            padding-bottom: 14px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 56px;
+            height: 4px;
+            background: #a8814f;
+            border-radius: 2px;
+        }
+        .section-sub {
+            color: #6b6155;
+            margin-bottom: 36px;
+            font-size: 1.05rem;
+        }
+        /* 卡片 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 28px 26px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+            border: 1px solid #e7dfd3;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 26px rgba(0,0,0,0.1);
+        }
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 14px;
+        }
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #2c2822;
+        }
+        .card p {
+            color: #4d453c;
+            font-size: 0.98rem;
+        }
+        /* 角色与篇章 */
+        .split-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        .list-block {
+            background: #fffdf9;
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid #e7dfd3;
+        }
+        .list-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            color: #2c2822;
+            border-left: 4px solid #a8814f;
+            padding-left: 16px;
+        }
+        .list-block ul li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd3c5;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .list-block ul li:last-child {
+            border-bottom: none;
+        }
+        .list-block .li-title {
+            font-weight: 700;
+            min-width: 80px;
+            color: #7a5c36;
+        }
+        /* 阅读顺序 */
+        .step-list {
+            counter-reset: step;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .step-item {
+            counter-increment: step;
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 22px 28px;
+            border-left: 6px solid #a8814f;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .step-item::before {
+            content: "0" counter(step);
+            font-size: 2rem;
+            font-weight: 800;
+            color: #a8814f;
+            opacity: 0.3;
+            line-height: 1;
+            min-width: 55px;
+        }
+        .step-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+        .step-item p {
+            color: #4d453c;
+        }
+        /* FAQ */
+        .faq-list {
+            max-width: 900px;
+        }
+        .faq-item {
+            background: #ffffff;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            padding: 20px 28px;
+            border: 1px solid #e7dfd3;
+            transition: background 0.2s;
+        }
+        .faq-item:hover {
+            background: #fcfaf7;
+        }
+        .faq-item h3 {
+            font-size: 1.15rem;
+            color: #3b342c;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .faq-item h3::before {
+            content: 'Q';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: #a8814f;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 0.9rem;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .faq-item p {
+            color: #4d453c;
+            padding-left: 40px;
+        }
+        /* 相关主题 */
+        .related-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+        .related-tags a {
+            background: #e9e1d5;
+            color: #3b342c;
+            padding: 10px 22px;
+            border-radius: 40px;
+            font-weight: 500;
+            transition: background 0.2s, color 0.2s;
+            font-size: 0.95rem;
+        }
+        .related-tags a:hover {
+            background: #a8814f;
+            color: #ffffff;
+        }
+        /* 页脚 */
+        footer {
+            background: #1a1815;
+            color: #9c9184;
+            padding: 40px 0 30px;
+            margin-top: 40px;
+        }
+        .footer-grid {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-brand {
+            font-size: 1.4rem;
+            color: #e0d5c5;
+            font-weight: 700;
+        }
+        .footer-links {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #b1a697;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            color: #e0d5c5;
+        }
+        .copyright {
+            border-top: 1px solid #2e2a24;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .split-list {
+                grid-template-columns: 1fr;
+            }
+            .header-wrap {
+                flex-direction: column;
+                gap: 10px;
+                padding: 14px 0;
+            }
+            nav ul {
+                justify-content: center;
+                gap: 16px;
+            }
+        }
+        @media (max-width: 600px) {
+            section {
+                padding: 40px 0;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .hero {
+                padding: 50px 0;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .step-item {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .step-item::before {
+                min-width: auto;
+            }
+            .faq-item p {
+                padding-left: 0;
+            }
+            .footer-grid {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-wrap">
+            <div class="brand">
+                <span class="brand-mark">♟</span>
+                <span>黑执事漫画</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">作品简介</a></li>
+                    <li><a href="#characters">主要角色</a></li>
+                    <li><a href="#arcs">篇章梳理</a></li>
+                    <li><a href="#guide">阅读顺序</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 首屏 -->
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>黑执事漫画</h1>
+                    <p>一部将哥特美学、契约羁绊与悬疑推理完美融合的经典日式漫画。自连载以来，黑执事漫画以其华丽细腻的画风、深刻复杂的人物塑造和跌宕起伏的剧情，吸引了全球无数读者。</p>
+                    <div class="hero-meta">
+                        <span>✒ 作者：枢梁（Yana Toboso） | 📚 连载状态：持续连载中 | 🏷 类型：黑暗奇幻 / 悬疑 / 历史</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 作品简介 -->
+        <section id="intro">
+            <div class="container">
+                <h2 class="section-title">黑执事漫画：一部关于契约与复仇的暗色史诗</h2>
+                <p class="section-sub">十九世纪维多利亚时期的英国，一个少年贵族与恶魔执事之间缔结了禁忌的契约。</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🕯</div>
+                        <h3>故事背景</h3>
+                        <p>故事发生在19世纪后期的英国。年仅13岁的伯爵少爷夏尔·凡多姆海威，在父母惨遭杀害后，与恶魔塞巴斯蒂安·米卡利斯缔结契约。塞巴斯蒂安以执事身份侍奉夏尔，代价是取走夏尔的灵魂。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">⚔️</div>
+                        <h3>核心主题</h3>
+                        <p>黑执事漫画并非单纯的复仇爽文。它深入探讨了人性中的忠诚与背叛、欲望与救赎、阶级与权力。每一个案件背后，都隐藏着对当时社会黑暗面的讽刺与反思。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎨</div>
+                        <h3>画风特色</h3>
+                        <p>枢梁老师的画风极其精致，无论是人物的服装细节、英伦建筑背景，还是华丽却不失诡异的氛围渲染，都展现出独特的哥特美学。角色的表情与眼神刻画尤为传神。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📖</div>
+                        <h3>连载信息</h3>
+                        <p>黑执事漫画最早于2006年10月在日本《月刊GFantasy》上开始连载。单行本由史克威尔艾尼克斯出版。中文版在中国大陆及台湾地区均有正式授权出版。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 主要角色 -->
+        <section id="characters" style="background: #f1ece4;">
+            <div class="container">
+                <h2 class="section-title">主要角色：主仆二人的纠葛</h2>
+                <p class="section-sub">黑执事漫画的灵魂，在于这对契约主仆之间危险而迷人的关系。</p>
+                <div class="split-list">
+                    <div class="list-block">
+                        <h3>凡多姆海威宅邸</h3>
+                        <ul>
+                            <li><span class="li-title">夏尔</span><span>凡多姆海威伯爵家的当家。在经历灭门惨案后，以灵魂为代价与塞巴斯蒂安缔结契约。性格冷静、高傲，有着超乎年龄的成熟与腹黑。</span></li>
+                            <li><span class="li-title">塞巴斯蒂安</span><span>自称“执事”，实为恶魔。能力超群，精通一切技能，但本质上对夏尔的灵魂虎视眈眈。口头禅是“我只是一名执事罢了”。</span></li>
+                            <li><span class="li-title">田中先生</span><span>凡多姆海威家的老总管，平时总是端着茶杯，看似糊涂，关键时刻却展现出惊人的实力与忠诚。</span></li>
+                            <li><span class="li-title">巴鲁多、菲尼安、梅琳</span><span>宅邸中的厨子、园丁和女仆，三人均有着夸张的“特长”与过往，是日常篇中的搞笑担当。</span></li>
+                        </ul>
+                    </div>
+                    <div class="list-block">
+                        <h3>伦敦的对手与盟友</h3>
+                        <ul>
+                            <li><span class="li-title">格雷尔·萨特克利夫</span><span>外表是红发的死神派遣协会成员，实为拿着电锯的“红发死神”。性格极度狂热，对塞巴斯蒂安抱有扭曲的兴趣。</span></li>
+                            <li><span class="li-title">威廉·T·斯皮尔斯</span><span>死神派遣协会的管理层，严肃刻板，是格雷尔的搭档兼上司。</span></li>
+                            <li><span class="li-title">刘、蓝猫</span><span>来自中国的神秘商人与其沉默寡言的保镖，在伦敦经营着“昆仑”茶馆，真实身份与目的成谜。</span></li>
+                            <li><span class="li-title">葬仪屋</span><span>居住于地下墓穴的情报贩子，自称“Under Taker”，总是带着诡异的笑容，知晓许多不为人知的秘密。</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 篇章梳理 -->
+        <section id="arcs">
+            <div class="container">
+                <h2 class="section-title">主要篇章梳理</h2>
+                <p class="section-sub">随着剧情推进，黑执事漫画的格局从日常破案逐步走向宏大的阴谋与对抗。</p>
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-icon">🔍</div>
+                        <h3>日常与犯罪篇</h3>
+                        <p>漫画早期，夏尔以“女王的看门狗”身份，接手各种离奇案件。包括开膛手杰克事件、马戏团篇、贵族学院篇等。这些篇章在展现主仆默契的同时，逐步揭开主线伏笔。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🎪</div>
+                        <h3>马戏团篇</h3>
+                        <p>夏尔追查失踪儿童案，潜入诺亚方舟马戏团。此篇章深刻展现了夏尔过去的创伤，也首次让读者意识到，并非所有堕落者都值得同情。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🏫</div>
+                        <h3>贵族学院篇</h3>
+                        <p>夏尔进入英国贵族学校威斯顿公学，调查学生失踪事件。该篇聚焦英国精英教育的腐朽本质，以及“P4”四人组的势力。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌊</div>
+                        <h3>绿魔女篇与豪华客船篇</h3>
+                        <p>夏尔为了寻找长生不老药前往德国，又在豪华客船上遭遇丧尸群。这些篇章引入了更多超自然元素，并将“死者复活”这一禁忌话题推向台前。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">🌑</div>
+                        <h3>青之教会篇与主线爆发</h3>
+                        <p>漫画后期，随着“青之教会”的出现，夏尔与塞巴斯蒂安的关系面临前所未有的考验。关于契约的真相、夏尔灵魂的颜色，以及恶魔的最终目的，都在这部分得到深入刻画。</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon">📌</div>
+                        <h3>当前进度</h3>
+                        <p>截至最近更新的章节，剧情已进入高潮阶段。夏尔与塞巴斯蒂安之间的博弈愈发紧张，而外部势力如死神派遣协会、葬仪屋的真实目的也逐渐浮出水面。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 阅读指南 -->
+        <section id="guide" style="background: #f1ece4;">
+            <div class="container">
+                <h2 class="section-title">黑执事漫画阅读指南</h2>
+                <p class="section-sub">对于新读者而言，了解正确的阅读顺序与观看方式，能获得更好的体验。</p>
+                <div class="step-list">
+                    <div class="step-item">
+                        <div>
+                            <h3>从漫画原作开始</h3>
+                            <p>黑执事漫画是故事的绝对原作。建议从第1卷开始按顺序阅读。动画版（第一季、第二季）有大量原创剧情，与漫画主线有出入，若想了解真正的故事走向，必须回归漫画。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div>
+                            <h3>理解“契约”的设定</h3>
+                            <p>夏尔与塞巴斯蒂安的契约是贯穿全篇的核心。契约要求塞巴斯蒂安在夏尔完成复仇前不能背叛，而代价是夏尔的灵魂。随着剧情发展，读者需要思考：夏尔真正想要的“复仇”究竟是什么？</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div>
+                            <h3>留意细节与伏笔</h3>
+                            <p>枢梁老师非常擅长在画面中埋藏细节。例如夏尔眼罩下的契约印记、塞巴斯蒂安的黑手套、背景中的报纸标题等。建议精读时放慢速度，反复品味每一格。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div>
+                            <h3>结合历史背景理解</h3>
+                            <p>漫画大量参考了英国维多利亚时代的历史事件，如开膛手杰克、印度殖民、贵族学校制度等。了解这些背景能让你更深刻地理解作者对当时社会的批判。</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div>
+                            <h3>选择优质中文版本</h3>
+                            <p>中文版单行本由“东立出版社”（台湾）等机构发行。网络连载版本请选择翻译准确、修图清晰的汉化组或官方平台。切勿因翻译粗糙而误解剧情。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">常见问题解答</h2>
+                <p class="section-sub">关于黑执事漫画，许多读者都有类似的疑惑，这里为你一一解答。</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3>黑执事漫画完结了吗？</h3>
+                        <p>尚未完结。漫画仍在《月刊GFantasy》上连载中，剧情处于高潮阶段。作者枢梁并未公布具体的完结时间，但故事已进入后期收束阶段。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>动画和漫画剧情一样吗？</h3>
+                        <p>不完全一样。动画第一季前半段改编自漫画早期剧情，但后半段及第二季为动画原创剧情。第三季《马戏团篇》和第四季《豪华客船篇》则回归漫画主线。如果你喜欢完整的黑执事故事，请务必阅读漫画。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>夏尔和塞巴斯蒂安最后会怎样？</h3>
+                        <p>由于漫画尚未完结，结局未知。但作者多次暗示，这不会是一个传统的“大团圆”结局。契约的代价、灵魂的去向，始终是悬在二人头顶的利剑。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>黑执事漫画有外传或衍生作品吗？</h3>
+                        <p>有的。包括官方粉丝书《黑执事 角色指南》、小说版等。此外，还有多部舞台剧和真人电影，但均属于改编作品，与漫画剧情有差异。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>为什么黑执事漫画中经常出现“女王”和“看门狗”的说法？</h3>
+                        <p>这是漫画对维多利亚女王统治下英国情报机构的暗喻。夏尔作为女王的“看门狗”，处理见不得光的脏活，实际上反映了当时英国贵族与王权之间的复杂关系。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>黑执事漫画适合什么年龄段的读者？</h3>
+                        <p>漫画虽然画风华丽，但内容包含血腥、暴力、心理扭曲等成人元素。在中国大陆，它属于青年漫画类别，建议16岁以上的读者阅读。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关主题 -->
+        <section style="padding-top: 20px;">
+            <div class="container">
+                <h2 class="section-title">相关主题延伸</h2>
+                <p class="section-sub">如果你喜欢黑执事漫画，以下这些方向或许也会让你产生兴趣。</p>
+                <div class="related-tags">
+                    <a href="#intro">枢梁其他作品</a>
+                    <a href="#characters">哥特风漫画推荐</a>
+                    <a href="#guide">维多利亚时代背景</a>
+                    <a href="#faq">恶魔契约类故事</a>
+                    <a href="#arcs">黑执事舞台剧</a>
+                    <a href="#guide">漫画收藏指南</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">黑执事漫画</div>
+                    <p style="margin-top: 8px; max-width: 380px;">专注于黑执事漫画的深入介绍与阅读交流。本站为爱好者整理的指南页面，不代表官方观点。</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#intro">作品简介</a>
+                    <a href="#characters">主要角色</a>
+                    <a href="#arcs">篇章梳理</a>
+                    <a href="#guide">阅读指南</a>
+                    <a href="#faq">常见问题</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 黑执事漫画指南 | 所有作品版权归原作者枢梁及出版社所有</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
